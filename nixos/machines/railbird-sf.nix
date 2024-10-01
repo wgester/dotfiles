@@ -12,7 +12,6 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
   boot.loader.systemd-boot.enable = true;
-  modules.postgres.enable = true;
 
   services.k3s.role = "agent";
 
@@ -28,6 +27,7 @@
   };
 
   features.full.enable = false;
+  myModules.postgres.enable = true;
   myModules.base.enable = true;
   myModules.desktop.enable = true;
   myModules.xmonad.enable = false;
